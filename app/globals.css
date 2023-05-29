@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply w-screen h-screen grid place-content-center bg-[#F2F2F2];
+  }
+  h1 {
+    @apply text-headerS md:text-header font-extrabold;
+  }
+  p {
+    @apply text-bodyS md:text-body text-darkGreyBlue;
+  }
+  section {
+    @apply p-4 md:py-[18px] md:px-5 flex;
+  }
+  .avatar {
+    @apply w-[39px] md:w-[45px] mr-[14px] md:mr-[19px] place-self-start;
+  }
+  .unread {
+    @apply bg-snow rounded-lg pr-[26px];
+  }
+  .name {
+    @apply text-veryDarkGreyBlue;
+  }
+  .group {
+    @apply text-blue;
+  }
+  .bold {
+    @apply font-bold;
+  }
+  .extrabold {
+    @apply font-extrabold;
+  }
+  .clickable {
+    @apply cursor-pointer hover:text-blue;
+  }
+  .date {
+    @apply text-greyBlue;
+  }
+  .unreadMark {
+    @apply inline-block ml-[7px] p-[5px] bg-red rounded-full;
+  }
+}
