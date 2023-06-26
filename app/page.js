@@ -22,12 +22,20 @@ const Home = () => {
 
   const unreadMark = () => <span className="unreadMark"> </span>
   const name = (name) => (
-    <span className="extrabold name clickable">{name}</span>
+    <span className="extrabold text-veryDarkGreyBlue name clickable">
+      {name}
+    </span>
   )
   const subject = (subject, addedClass = "") => (
     <span className={`bold md:extrabold clickable ${addedClass}`}>
       {subject}
     </span>
+  )
+
+  const Rectangle = ({ children }) => (
+    <p className="p-4 md:p-5 mt-3 border-solid clickable border-veryLightGreyBlue hover:bg-lightGreyBlue  border-[1px] rounded-[5px]">
+      {children}
+    </p>
   )
 
   return (
@@ -39,7 +47,10 @@ const Home = () => {
             {numberUnread}
           </p>
         </div>
-        <p className="self-center clickable" onClick={() => handleRead()}>
+        <p
+          className="self-center clickable font-medium"
+          onClick={() => handleRead()}
+        >
           Mark as all read
         </p>
       </header>
@@ -52,7 +63,7 @@ const Home = () => {
               {subject("My first tournament today!")}
               {isUnread && unreadMark()}
             </p>
-            <p className="date ">1m ago</p>
+            <p className="date">1m ago</p>
           </div>
         </section>
         <section className={isUnread ? "unread" : ""}>
@@ -73,7 +84,7 @@ const Home = () => {
               {subject("Chess Club", "group")}
               {isUnread && unreadMark()}
             </p>
-            <p className="date">5m ago</p>
+            <p className="date">1 day ago</p>
           </div>
         </section>
         <section>
@@ -81,11 +92,11 @@ const Home = () => {
           <div>
             <p>{name("Rizky Hasanuddin")} sent you a private message</p>
             <p className="date">5 days ago</p>
-            <p className="p-4 border-solid border-veryLightGreyBlue border-[1px] rounded-[5px]">
+            <Rectangle>
               Hello, thanks for setting up the Chess Club. I’ve been a member
               for a few weeks now and I’m already having lots of fun and
               improving my game.
-            </p>
+            </Rectangle>
           </div>
         </section>
         <section className="justify-between">
@@ -96,7 +107,10 @@ const Home = () => {
               <p className="date">1 week ago</p>
             </div>
           </div>
-          <Image className="avatar justify-self-end" src={ImageChess} />
+          <Image
+            className="avatar justify-self-end clickable"
+            src={ImageChess}
+          />
         </section>
         <section>
           <Image className="avatar" src={AvatarNathan} />

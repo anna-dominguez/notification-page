@@ -4,10 +4,10 @@
 
 @layer base {
   body {
-    @apply w-screen h-screen grid place-content-center bg-[#F2F2F2];
+    @apply w-screen h-screen grid place-content-center font-medium text-bodyS md:text-body bg-[#F2F2F2];
   }
   h1 {
-    @apply text-headerS md:text-header font-extrabold;
+    @apply text-headerS md:text-header extrabold;
   }
   p {
     @apply text-bodyS md:text-body text-darkGreyBlue;

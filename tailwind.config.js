@@ -23,11 +23,7 @@ module.exports = {
       body: "16px",
       bodyS: "14px",
     },
-    extend: {
-      fontFamily: {
-        sans: "Plus Jakarta Sans",
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }

@@ -1,8 +1,10 @@
-import Head from "next/head"
 import "./globals.css"
 import { Plus_Jakarta_Sans } from "next/font/google"
 
-const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] })
+const plusJakartaSans = Plus_Jakarta_Sans({
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+})
 
 export const metadata = {
   title: "Notification Page",
